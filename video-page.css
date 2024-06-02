@@ -1,0 +1,398 @@
+.main-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    .left-side-container{
+        display: flex;
+        flex-direction: column;
+        .video-player{
+            display: flex;
+            position: relative;
+            margin: 10px 30px;
+            .video-set{
+                width: 1050px;
+                border-radius: 10px;
+                z-index: 4;
+            }
+            .yt-logo{
+                position: absolute;
+                width: 130px;
+                z-index: 5;
+                top: 220px;
+                left: 450px;
+                cursor: pointer;
+                transition: opacity 1s;
+                border-radius: 100px;
+            }
+            .yt-logo:active{
+                opacity: 0;
+                background-color: rgba(255, 255, 255, 0.123);
+            }}
+        .about-video{
+            display: flex;
+            flex-direction: column;
+            margin: 30px;
+            .video-title{
+                .video-title-text{
+                    font-weight: bold;
+                    font-size: 22px;
+                    margin-top:-20px;
+                }
+            }
+            .video-interactions{
+                align-items: center;
+                display: flex;
+                max-width: 1050px;
+                min-width: 500px;
+                flex-direction: row;
+                justify-content: space-between;
+                .video-channel{
+
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    .video-channel-profile{
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 25px;
+                        object-fit: cover;
+                    } 
+                    .video-channel-name{
+                        display: flex;
+                        flex-direction: column;
+                        margin: 7px;
+                        .name-text{
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                        .subscibers-count{
+                            color: rgba(85, 85, 85, 0.603);
+                            font-size: 17px;
+                        }
+                    }
+                    .subscribe-button {
+                        margin-left: 10px;
+                        padding: 10px 15px;
+                        border-radius: 30px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: rgb(42, 42, 42);
+                        color: white;
+                        transition: background-color 0.2s, color 0.2s;
+                    }
+                    .subscribe-button-check {
+                        display: none;
+                    }
+                    .subscribe-button-check:checked + .subscribe-button {
+                        background-color: lightgray;
+                        color: rgb(44, 44, 44);
+                    }
+                }
+                
+                     
+                .interaction-buttons{
+
+                    .int-button{
+                        vertical-align: top;
+                        padding: 10px 15px;
+                        border-top-left-radius: 30px;
+                        border-bottom-left-radius: 30px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: rgb(238, 235, 235);
+                        color: rgb(44, 44, 44);
+                        transition: background-color 0.2s, color 0.2s;
+                        font-size: 16px;
+                    }
+                    .int-button:active{
+                        background-color: rgb(167, 166, 166);
+                        
+                    }
+                    .interaction-buttons-logo{
+                        width: 14px;
+                    }
+                    
+                        
+                }
+            }
+            .video-description-container:hover{
+                background-color: rgb(223, 223, 223);
+                box-shadow: 0 0 7px rgba(68, 68, 68, 0.336);
+            }
+            .video-description-container{
+                border-radius: 20px;
+                display: flex;
+                margin-top: 30px;
+                flex-direction: column;
+                width: 1050px;
+                background-color: rgb(235, 233, 233);
+                box-shadow: 0 0 7px rgba(92, 92, 92, 0.336);
+                transition: background-color 0.2s, box-shadow 0.2 ;
+                .video-reach{
+                    margin-top: 5px;
+                    margin-left: 15px;
+                    .video-reach-text{
+                        font-size:16px;
+                        font-weight: 500;
+                    }
+                }
+                .video-description{
+                    margin-bottom: 10px;
+                    margin-left: 15px;
+                    .video-description-text1,
+                    .video-description-text2{
+                        font-size: 16px;
+                        color: gray;
+                    }
+                }
+            }
+        }
+        .comment-section{
+            .comment-count{
+                margin-left: 10px;
+                .comment-count-number{
+                    color: black;
+                    font-size: 20px;
+                }}
+                .add-comment{
+                    width: 1100px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 50px;
+                    margin-left: 20px;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    .content-part{
+                        width: 1100px;
+                        align-self: self-start;
+                        display: flex;
+                        flex-direction: row;
+                        .user-profile-picture{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 20px;
+                    }
+                        .add-comment-text{
+                            width: 100%;
+                            border-top: 0;
+                            border-left: 0;
+                            border-right: 0;
+                            outline:none;
+                            background-color: whitesmoke;
+                            margin-left: 6px;
+                        }
+                    }
+                    .button-part{
+                        margin-top: 10px;
+                        align-self: self-end;
+                        .cancel-button{
+                            padding: 10px 14px 10px 14px;
+                            border: none;
+                            border-radius: 20px;
+                            background-color: rgb(238, 235, 235);
+                            cursor: pointer;
+                        }
+                        .cancel-button:hover{
+                            background-color: rgb(209, 208, 208);
+                        }
+                        .comment-button{
+                            padding: 10px 14px 10px 14px;
+                            border: none;
+                            border-radius: 20px;
+                            background-color: rgba(22, 95, 252, 0.897);
+                            color: white;
+                            cursor: pointer;
+                        }
+                        .comment-button:hover{
+                            background-color: rgba(17, 74, 197, 0.918);
+                        }
+                        
+                    }
+                }
+                .other-comment{
+                    display: flex;
+                    flex-direction: row;
+                    margin-left:15px;
+                    margin-top: 20px;
+                    .part2{
+                        display: flex;
+                        flex-direction: column;
+                        .about-comment{
+                            display: flex;
+                            flex-direction: row;
+                            height: 20px;
+                            margin-left: 15px;
+                            .user-name{
+                                font-size: 12px;
+                                font-weight: 500;
+                                margin-top:2px;
+                            }
+                            .time-period{
+                                font-size: 12px;
+                                color: gray;
+                                margin-top:2px;
+                                margin-left: 4px;
+                            }
+                        }
+                        .comment-title{
+                            margin-left: 17px;
+                            .comment-title-text{
+                                font-size: 14px;
+                                margin-top: 1px;
+                                margin-bottom: 4px;
+                            }
+                        }
+                        .comment-engagement{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            margin-left: 13px;
+                            width: 120px;
+                            justify-content: space-between;
+                            .comment-like{
+                                border: none;
+                                border-radius: 20px;
+                                padding:2px 2px;
+                                background-color: whitesmoke;
+                                font-size: 12px;
+                                color: gray;
+                            }
+                            .comment-like:hover{
+                                background-color: rgb(218, 218, 218);
+
+                            }
+                            .comment-like:active{
+                                background-color: rgb(179, 179, 179);
+                            }
+                            .comment-reply{
+                                border: none;
+                                border-radius: 20px;
+                                padding:8px 10px;
+                                background-color: whitesmoke;
+                                font-size: 12px;
+                                color: gray;
+                                cursor: pointer;
+                                font-size: 12px;
+                            }
+                            .comment-reply:hover{
+                                background-color: rgb(218, 218, 218);
+                            }
+                            .comment-button:active{
+                                background-color: rgb(179, 179, 179);
+                            }
+                        }
+                    }
+                }
+            
+        }    
+    }
+    .right-side-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        .google-ads{
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            height: 180px;
+            background-color: lightgray;
+            border-radius: 5px;
+            .ad-banner{
+                .ad-image{
+                    width: 99.2%;
+                    height: 90px;
+                    object-fit: cover;
+                    margin: 2px 0 0 2px;
+                    border-radius: 5px 5px 0 0;
+                }
+                .ad-content{
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    width: 99.2%;
+                    height: 85px;
+                    margin-left: 2px;
+                    margin-right: 2px;
+                    border-radius: 0 0 5px 5px;
+                    background-color: whitesmoke;
+                    margin-top: -4px;
+                    .Start-now{
+                        width: 90px;
+                        height: 40px;
+                        margin-left: 100px;
+                            border: none;
+                            border-radius: 50px;
+                            background-color: rgba(22, 95, 252, 0.897);
+                            color: white;
+                            cursor: pointer;
+                            
+                    }
+                    .Start-now:hover{
+                        background-color: rgba(17, 74, 197, 0.918);
+                    }
+                }
+            }}
+        .choice{
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            justify-content: space-between;
+            .choice-button{
+                padding: 10px 20px 10px 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 18px;
+                border:none;
+                border-radius: 100px;
+                background-color: rgb(238, 235, 235);
+                cursor: pointer;
+            }
+            .choice-button:hover{
+                background-color: rgb(190, 190, 190);
+            }
+        }
+        .video-suggestions{
+            display: flex;
+            flex-direction: column;
+            .video-preview{
+                display: flex;
+                flex-direction: row;
+                vertical-align: top;
+                margin-top: 5px;
+                .video-preview-thumbnail{
+                    position: relative;
+                    display: flex;
+                    .video-preview-thumbnail-img{
+                        width: 220px;
+                        border-radius: 10px;
+                    }    
+                    .timestamp{
+                        position: absolute;
+                        bottom: 5px;
+                        right: 5px;
+                        .time-text{
+                            background-color: rgba(5, 5, 5, 0.603);
+                            color: white;
+                            border-radius: 4px;
+                            font-size: 10px;
+                            padding:4px;
+                            margin: 0;
+                        }
+                    }
+                }
+                .video-preview-about{
+                    margin-left: 10px;
+                    margin-bottom: 20px;
+                }
+                .more-button:hover{
+                    background-color: lightgray;
+                    box-shadow: 0px 0px 10px lightgray;
+                }
+            }
+        }    
+    }
+}

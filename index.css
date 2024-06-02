@@ -1,0 +1,97 @@
+body{
+
+    font-family: "Roboto", Arial;
+}
+.hold-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 40px;
+            row-gap: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+}
+@media (max-width: 1500px){
+    .hold-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }}    
+@media (max-width: 1100px){
+        .hold-grid{
+            grid-template-columns: 1fr 1fr;
+}    
+}
+.main{
+            width: 100%;
+            height: 320px; 
+            font-family: "Roboto", Arial;
+            min-width: 300px;
+            
+             
+            .thumbnail{
+                cursor: pointer;
+                z-index: 1;
+                position: relative;
+                .timestamp{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    .time-text{
+                        background-color: rgba(5, 5, 5, 0.603);
+                        color: white;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        padding:4px;
+                        margin: 0;
+                    }
+                }
+                .thumbnail-picture{
+                    border-radius: 10px;
+                    width: 100%;
+ 
+                }
+
+            }}
+
+.bucket{
+                margin-top: 10px;
+                margin-left: 5px;
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                column-gap: 10px;
+                    .channel{
+                        cursor: pointer;
+                            .channel-profile{
+                                width: 40px;
+                                border-radius: 34px;
+                                
+                            }
+                    }
+                    .about{
+                        width: 100%;
+                        .title{
+                            cursor: pointer;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 20px;
+                            margin: 0;
+                            margin-bottom: 9px;
+                            
+                        }
+                        .channel-name{
+                            cursor: pointer;
+                            font-size: 16px;
+                            margin: 0 ;
+                        
+                        }
+                        .reach{
+                            font-size: 16px;
+                            color: rgb(96, 96, 96);
+                            margin:0;
+                            margin-top: 5px;
+                    
+                    }    
+
+
+
+                }
+            }
+        
