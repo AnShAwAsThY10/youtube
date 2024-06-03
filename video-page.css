@@ -358,6 +358,8 @@
         .video-suggestions{
             display: flex;
             flex-direction: column;
+            height: 1000px;
+            justify-content: space-between;
             .video-preview{
                 display: flex;
                 flex-direction: row;
